@@ -1,20 +1,20 @@
 var orm = require ("../config/orm.js");
-var burgers = {
+var lemonade = {
   selectAll: function(cb){
-    orm.selectAll("burgers", function(res){
+    orm.selectAll("lemonade", function(res){
       cb(res);
     });
   },
   insertOne: function(cb){
-    orm.insertOne("burgers", burger, function(res){
+    orm.insertOne("lemonade", lemonade, function(res){
       cb(res);
     });
   },
   updateOne: function(cb){
-    orm.updateOne("burgers", idNum, function(res){
+    orm.updateOne("lemonade", idNum, function(res){
       cb(res);
     });
   },
 };
 
-module.exports = burgers; 
+module.exports = lemonade; 
