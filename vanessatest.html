@@ -3,20 +3,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./public/assets/css/lemonade_style.css">
-<style type="text/css">
-	img.wp-smiley,
-	img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 .07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}
-</style>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="http://properfood.com/wp-content/themes/properfood/style.css?ver=20150603" type="text/css" media="all">
 <script type="text/javascript" src="http://properfood.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
 <script type="text/javascript" src="http://properfood.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
@@ -24,21 +19,20 @@
 
 <body class="home page-template-default page page-id-2">
 <div id="main_container">
-  <a href="#" id="menu-toggle">Menu</a>
   <div id="main_container_inner">
     <div class="header_top">
       <div id="menu_container">
         <div class="menu_container_inner">
           <ul id="menu-header-menu" class="menu"><
-			<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menuitem-33"><a title="Food" href="http://properfood.com/food/"><img height="42" width="42" src="http://longbluestraw.com/wp-content/uploads/2016/05/lemon.jpg">Home</a></li>
+			<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menuitem-33"><a title="Food" href="http://properfood.com/food/">Home</a></li>
 			<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menuitem-33"><a title="Food" href="http://properfood.com/food/">Menu</a></li>
-			<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a title="Catering" href="http://properfood.com/catering/">Catering</a></li>
-			<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a title="Locations" href="http://properfood.com/locations/">Locations</a></li>
 		 </ul>          
-		<div class="clear"></div>
      </div>
-</div><!--//menu_container-->
 
+<div>
+	<p></p>
+</div>
+</div><!--//menu_container-->
       <div class="logo_cont">
         <div align="center">
           <a href="http://google.com">
@@ -48,31 +42,72 @@
       </div><!--//logo_cont-->
     </div><!--//header_top-->
     <div id="content">
-		<div id="slideshow-container">
-		<ul class="cycle-slideshow" data-cycle-slides="> li" data-cycle-speed="1000" data-cycle-timeout="5000" data-cycle-log="false" style="position: relative;">
-			<li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; opacity: 0; display: block; visibility: hidden;">
-				<img src="http://cdn.shopify.com/s/files/1/0456/3093/products/Pin-1_545e9782-24ff-4b0b-ac59-22bd75a9ed33_1024x1024.jpg?v=1468442955" alt="">
-			</li>
-			<li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 96; visibility: hidden; opacity: 0; display: block;">
-				<img src="https://i.pinimg.com/originals/35/da/d6/35dad647d66abd1e6ff99ac62dc52e6c.jpg" alt="">
-			</li>
-			<li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 95; visibility: hidden; opacity: 0; display: block;">
-				<img src="https://ih0.redbubble.net/image.303636851.7189/flat,1000x1000,075,f.u1.jpg" alt="">
-			</li>
-			<li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 100; visibility: hidden; opacity: 0; display: block;">
-				<img src="http://cdn.shopify.com/s/files/1/0456/3093/products/Pin-1_545e9782-24ff-4b0b-ac59-22bd75a9ed33_1024x1024.jpg?v=1468442955" alt="">
-			</li>
-			<li class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: visible; opacity: 1; display: block;">
-				<img src="http://freedesignfile.com/upload/2015/08/Hand-drawn-lemonade-with-glass-cup-vector.jpg" alt="">
-			</li>
-		</ul>
-	</div>
 
-<!-- Body - Elaine to add -->
-<h1 class="the-title">It's Getting Hot! Get some Lemonade</h1>
-<div class="single_content">
-	<p>Summer is here! Grab yourself some Lemonade</p>
+<!--PRODUCTS -->
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="http://cdn-image.foodandwine.com/sites/default/files/1495034973/layered-blackberry-and-turmeric-lemonade-XL-RECIP0717.jpg" alt="...">
+      <div class="caption">
+        <h3>Pink Lemonade</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Buy</a> <a href="#" class="btn btn-default" role="button">View Details</a></p>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="http://www.oceanspray.com/CMSPages/GetFile.aspx?guid=95506230-dd80-4c49-8bff-65dd01ab582d" alt="...">
+      <div class="caption">
+        <h3>Ginger Lemonade</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Buy</a> <a href="#" class="btn btn-default" role="button">View Details</a></p>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://www.cottercrunch.com/wp-content/uploads/2017/06/new-turmeric-ginger-lemonade-with-mint_-7.jpg" alt="...">
+      <div class="caption">
+        <h3>Salt Lemonade</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Buy</a> <a href="#" class="btn btn-default" role="button">View Details</a></p>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<!-- FOR SELLER TO SELL LEMONADE -->
+<div class="panel panel-default">
+  <div class="panel-body">
+  	<h1>Sell Your Lemonade</h1>
+  	<form action="/action_page.php">
+  Lemonade Name:<br>
+  <input type="text" name="firstname" value="Pink Lemonade"><br>
+  Quantity:<br>
+  <input type="text" name="lastname" value="100"><br><br>
+  <input type="submit" value="Submit">
+
+</form>
+  </div>
+</div>
+
+<!-- FOR BUYER TO BUY LEMONADE -->
+<div class="panel panel-default">
+  <div class="panel-body">
+  	<h1>Buy Your Lemonade</h1>
+  	<form action="/action_page.php">
+  Lemonade Name:<br>
+  <input type="text" name="firstname" value="Pink Lemonade"><br>
+  Quantity:<br>
+  <input type="text" name="lastname" value="100"><br><br>
+  <input type="submit" value="Submit">
+
+</form>
+  </div>
+</div>
+
 
 <!-- Footer -->
 <div id="footer">
