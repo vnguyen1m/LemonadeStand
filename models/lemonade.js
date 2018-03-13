@@ -1,20 +1,20 @@
 var orm = require ("../config/orm.js");
 var lemonade = {
   selectAll: function(cb){
-    orm.selectAll("lemonade", function(res){
+    orm.selectAll("lemonades", function(res){
       cb(res);
     });
   },
   insertOne: function(cb){
-    orm.insertOne("lemonade", lemonade, function(res){
+    orm.insertOne("lemonades", lemonade, price, description, url, function(res){
       cb(res);
     });
   },
-  updateOne: function(cb){
-    orm.updateOne("lemonade", idNum, function(res){
-      cb(res);
-    });
-  },
+  // updateOne: function(cb){
+  //   orm.updateOne("lemonades", idNum, function(res){
+  //     cb(res);
+  //   });
+  // },
 };
 
 module.exports = lemonade; 
