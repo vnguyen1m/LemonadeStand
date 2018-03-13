@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
 
+
 app.use(methodOverride('_method'));
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
@@ -25,5 +26,5 @@ app.set('view engine', 'handlebars');
 app.use(ctrl);
 
 app.listen(PORT, function(){
-  console.log("App is now listening..");
+  console.log("App is now listening.." + PORT);
 });
