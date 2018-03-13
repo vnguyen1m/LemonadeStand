@@ -23,7 +23,7 @@
     <div class="header_top">
       <div id="menu_container">
         <div class="menu_container_inner">
-          <ul id="menu-header-menu" class="menu"><
+          <ul id="menu-header-menu" class="menu">
 			<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menuitem-33"><a title="Food" href="http://properfood.com/food/">Home</a></li>
 			<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menuitem-33"><a title="Food" href="http://properfood.com/food/">Menu</a></li>
 		 </ul>          
@@ -41,13 +41,20 @@
         </div>
       </div><!--//logo_cont-->
     </div><!--//header_top-->
+<div id="iframe">
+	<iframe width="1000" height="315" src="https://www.youtube.com/embed/PeonBmeFR8o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
     <div id="content">
+
+
+
 
 <!--PRODUCTS -->
 <div class="row">
   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="http://cdn-image.foodandwine.com/sites/default/files/1495034973/layered-blackberry-and-turmeric-lemonade-XL-RECIP0717.jpg" alt="...">
+    <div class="thumbnail" >
+      <img id='thumbnail-images' src="http://cdn-image.foodandwine.com/sites/default/files/1495034973/layered-blackberry-and-turmeric-lemonade-XL-RECIP0717.jpg" alt="...">
       <div class="caption">
         <h3>Pink Lemonade</h3>
         <p>...</p>
@@ -56,18 +63,18 @@
     </div>
   </div>
     <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="http://www.oceanspray.com/CMSPages/GetFile.aspx?guid=95506230-dd80-4c49-8bff-65dd01ab582d" alt="...">
+    <div class="thumbnail" >
+      <img id='thumbnail-images' src="http://www.oceanspray.com/CMSPages/GetFile.aspx?guid=95506230-dd80-4c49-8bff-65dd01ab582d" alt="...">
       <div class="caption">
         <h3>Ginger Lemonade</h3>
-        <p>...</p>
+        <p>Tangy. Citrusy. Delicious!</p>
         <p><a href="#" class="btn btn-primary" role="button">Buy</a> <a href="#" class="btn btn-default" role="button">View Details</a></p>
       </div>
     </div>
   </div>
     <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="https://www.cottercrunch.com/wp-content/uploads/2017/06/new-turmeric-ginger-lemonade-with-mint_-7.jpg" alt="...">
+    <div class="thumbnail" >
+      <img id='thumbnail-images' class="testimage" src="https://www.cottercrunch.com/wp-content/uploads/2017/06/new-turmeric-ginger-lemonade-with-mint_-7.jpg" alt="...">
       <div class="caption">
         <h3>Salt Lemonade</h3>
         <p>...</p>
@@ -76,6 +83,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 <!-- FOR SELLER TO SELL LEMONADE -->
@@ -135,6 +144,13 @@
 
 <script type="text/javascript" src="http://properfood.com/wp-content/themes/properfood/js/iosbugfix.min.js?ver=10150507"></script>
 <script type="text/javascript" src="http://properfood.com/wp-content/themes/properfood/js/jquery.cycle2.withSwipe.min.js?ver=10150507"></script>
+
+<script type="text/javascript">
+	var img = document.querySelector(".testimage");
+
+	console.log(img.naturalHeight);
+</script>
+
 <script type="text/javascript" src="http://properfood.com/wp-content/themes/properfood/js/global.min.js?ver=10150507"></script>
 <script type="text/javascript" src="http://properfood.com/wp-includes/js/wp-embed.min.js?ver=4.7.9"></script>
 </div></body></html>

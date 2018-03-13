@@ -37,3 +37,32 @@
 	text-align: auto;
 }
 
+#thumbnail-images {
+    display: block;
+    max-width: 300px;
+    height: 300px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
+    position: absolute;
+    top: 100;
+    bottom: 0;
+    left: 0;
+    width: 300;
+    height: 300;
+    border: 0;
+}
+
+#iframe .thumbnail {
+  text-align: center;
+}
+
+.thumbnail {
+  text-align: center;
+}
