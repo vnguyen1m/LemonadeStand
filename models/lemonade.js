@@ -5,8 +5,8 @@ var lemonade = {
       cb(res);
     });
   },
-  insertOne: function(cb){
-    orm.insertOne("lemonades", lemonade, price, description, url, function(res){
+  insertOne: function(product_name, price, description, url, seller_id, cb){
+    orm.insertOne("lemonades", product_name, price, description, url, seller_id, function(res){
       cb(res);
     });
   },
@@ -17,4 +17,4 @@ var lemonade = {
   // },
 };
 
-module.exports = lemonade; 
+module.exports = lemonade;

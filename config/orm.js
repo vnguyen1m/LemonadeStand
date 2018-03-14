@@ -10,18 +10,23 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function(table, lemonade, price, description, url, cb){
+  insertOne: function(table, lemonade, price, description, url, seller_id, cb){
     var queryString = "INSERT INTO " + table + " SET ?";
 
     console.log(queryString);
 
-    connection.query(queryString, [{product_name: lemonade, price: price, description: description, image: url}],
+    connection.query(queryString, [{product_name: lemonade, price: price, description: description, image: url, seller_id: seller_id}],
       function(err, result){
+      console.log("result ", result);
+      console.log("url ", url);     
+
         if (err){
           throw err;
         }
+        //connection.query()
         cb(result);
     });
+
   },
   //   updateOne: function(table, idNum, cb){
   //   var queryString = "UPDATE " + table + " SET ? WHERE ?";
