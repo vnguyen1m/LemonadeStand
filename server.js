@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-const Nightmare = require('nightmare')
-const nightmare = Nightmare({ show: true })
 
-nightmare
-  .goto('https://duckduckgo.com')
-  .type('#search_form_input_homepage', 'github nightmare')
-  .click('#search_button_homepage')
-  .wait('#r1-0 a.result__a')
-  .evaluate(() => document.querySelector('#r1-0 a.result__a').href)
-  .end()
-  .then(console.log)
-  .catch(error => {
-    console.error('Search failed:', error)
-  })
-
-  var yay = "vanessa";
-  console.log(yay);
-=======
 // =============================================================
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -47,4 +29,4 @@ app.use(ctrl);
 app.listen(PORT, function(){
   console.log("App is now listening.." + PORT);
 });
->>>>>>> 5e9e6d575af14281ca706176a38cce83a1ba7689
+
