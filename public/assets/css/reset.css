@@ -46,3 +46,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+button {
+	background-color: rgb(219, 236, 236);
+
+}
+
+form {
+	width: 60%;
+	margin-left: 2px;
+	position: relative;
+	text-align: center;
+	border: 2px;
+	padding: 2px;
+	background-color: rgb(219, 236, 236);
+}

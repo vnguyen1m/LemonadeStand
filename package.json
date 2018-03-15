@@ -18,12 +18,25 @@
   },
   "homepage": "https://github.com/vnguyen1m/LemonadeStand#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+    "express-messages": "*",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.0.3",
+    "jsonwebtoken": "^8.2.0",
     "method-override": "^2.3.10",
     "mysql": "^2.15.0",
-    "nightmare": "^3.0.0"
-  }
+    "nightmare": "^3.0.0",
+    "passport": "^0.4.0",
+    "passport-http": "*",
+    "passport-local": "^1.0.0",
+    "password-hash": "^1.2.2"
+  },
+  "devDependencies": {},
+  "keywords": []
 }

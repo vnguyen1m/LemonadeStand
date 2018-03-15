@@ -10,11 +10,22 @@ var lemonade = {
       cb(res);
     });
   },
-  // updateOne: function(cb){
-  //   orm.updateOne("lemonades", idNum, function(res){
-  //     cb(res);
-  //   });
-  // },
+  updateOne: function(table, data, cb){
+    orm.updateOne(table, data, function(res){
+      cb(res);
+    });
+  },  
+  create: function(table, cols, vals, cb) {
+    orm.create(table, cols, vals, function(res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = lemonade; 
+
+module.exports.selectUser = function(table, params, callback){
+  orm.getUser(table, params, function(res){
+    callback(res)
+  })
+}

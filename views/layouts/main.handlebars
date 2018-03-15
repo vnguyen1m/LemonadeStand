@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,34 +11,64 @@
 	<link rel="stylesheet" type="text/css" href="/assets/css/lemonade.css">
 
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	 crossorigin="anonymous">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
 </head>
-<body>
 
+<body>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<div id="header" class="container col-xs-12 text-center">
-					<h1> Temporary Header: Lemonade Stand </h1>
+				<div id="header" class="container col-xs-12 text-center" style="float: right">
+					<h1> Lemonade Stand </h1>
+					<div style="float: right">
+						<ul class="list-inline" style="float: right;margin-top: 30px;">
+							<li class="home">
+								<a href="#">Home</a>
+							</li>
+							{{#if user}}
+							<li class="logout">
+								<a href="/users/logout">Log out</a>
+							</li>
+							{{else}}
+							<li class="login">
+								<a href="/users/login">Login</a>
+							</li>
+							<li class="signUp">
+								<a href="/users/register">Sign Up</a>
+							</li>
+							{{/if}}
+							
+					</div>
 					<br>
 				</div>
 			</div>
 		</div>
 		<div>
-			{{{ body }}}
+
+
+			</ul>
 		</div>
+		<div>
+
+
+		</div>
+		{{{body}}}
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 </body>
+
 </html>
