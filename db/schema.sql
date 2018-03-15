@@ -12,7 +12,7 @@ CREATE TABLE lemonades (
 	image VARCHAR(300),
 	seller_id INT NOT NULL,
 	buyer_id INT,
-	PRIMARY KEY (id),
+	PRIMARY KEY (id)
 );
 
 -- CREATE TABLE users (
