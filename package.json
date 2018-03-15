@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/vnguyen1m/LemonadeStand#readme",
   "dependencies": {
+    "@types/node": "^9.4.7",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
@@ -35,7 +36,9 @@
     "passport": "^0.4.0",
     "passport-http": "*",
     "passport-local": "^1.0.0",
-    "password-hash": "^1.2.2"
+    "password-hash": "^1.2.2",
+    "reflect-metadata": "^0.1.12",
+    "typeorm": "^0.1.16"
   },
   "devDependencies": {},
   "keywords": []

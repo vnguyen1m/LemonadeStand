@@ -4,19 +4,18 @@ const jwt = require('jsonwebtoken');
 
 var lemonade = require("../models/lemonade.js");
 
-router.get("/", function (req, res){
-    
-  console.log('hello home page')
-//   console.log(lemonade);
-//   lemonade.selectAll(function(data){
-//     var lemonadeObject = {
-//       lemonades:data
-//     };
-    // console.log(lemonadeObject);
-    //res.json(lemonadeObject)
-    res.render("layouts/index");
-    
-//   });
+// Get Homepage
+router.get('/', ensureAuthenticated, function(req, res){
+	res.render('index');
 });
+
+function ensureAuthenticated(req, res, next){
+	if(req.isAuthenticated()){
+		return next();
+	} else {
+		req.flash('error_msg','You are not logged in');
+		res.redirect('/users/login');
+	}
+}
 
 module.exports = router;

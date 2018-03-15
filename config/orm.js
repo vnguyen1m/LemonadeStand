@@ -37,77 +37,72 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-var orm = {
-  selectAll: function (table, cb) {
-    var queryString = "Select * FROM " + table + ";";
-    connection.query(queryString, function (err, result) {
+module.exports.selectAll = function (table, cb) {
+  var queryString = "Select * FROM " + table + ";";
+  connection.query(queryString, function (err, result) {
+    if (err) {
+      throw err;
+    }
+    cb(result);
+  });
+},
+
+module.exports.insertOne = function (table, lemonade, price, description, url, cb) {
+  var queryString = "INSERT INTO " + table + " SET ?";
+
+  console.log(queryString);
+
+  connection.query(queryString, [{ product_name: lemonade, price: price, description: description, image: url }],
+    function (err, result) {
       if (err) {
         throw err;
       }
       cb(result);
     });
-  },
-  insertOne: function (table, lemonade, price, description, url, cb) {
-    var queryString = "INSERT INTO " + table + " SET ?";
-
-    console.log(queryString);
-
-    connection.query(queryString, [{ product_name: lemonade, price: price, description: description, image: url }],
-      function (err, result) {
-        if (err) {
-          throw err;
-        }
-        cb(result);
-      });
-  },
-  create: function(table, cols, vals, cb) {
-    console.log("orm.js table name \n", table);
-    console.log("orm.js table cols \n", cols);
-    console.log("orm.js table vals \n", vals);
-    
-    var queryString = "INSERT INTO " + table;
-    console.log(queryString);
-    console.log(vals.length)
-
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
-
-    console.log(queryString);
-
-    connection.query(queryString, vals, function(err, result) {
-      if (err) {
-        throw err;
-      }
-
-      cb(result);
-    });
-  },
+}
 
 
-selectUser: function(table, username, callback){
-    // var queryString =  "Select lname FROM " + table +  " WHERE email = ?";
-    var queryString = "Select lname from user where email = 'dannymelesse@gmail.com'"
-    console.log(queryString)
-    connection.query(queryString, function(err, res){
-      console.log("am the result ===", res)
-     if(err){
-        console.log("select user erro ==>", err)
-      }
-      callback(res)
-    });
-  },
+module.exports.create =function(table, cols, vals, cb) {
+  console.log("orm.js table name \n", table);
+  console.log("orm.js table cols \n", cols);
+  console.log("orm.js table vals \n", vals);
+  
+  var queryString = "INSERT INTO " + table;
+  console.log(queryString);
+  console.log(vals.length)
 
-  selectUserById: function(id, callback){
-    var queryString = "SELECT * FROM  users, WHERE id= ?";
-    connection.query(queryString, id, function(err, result){
-      callback(result);
-    })
+  queryString += " (";
+  queryString += cols.toString();
+  queryString += ") ";
+  queryString += "VALUES (";
+  queryString += printQuestionMarks(vals.length);
+  queryString += ") ";
 
-  }
-};
+  console.log(queryString);
 
-module.exports = orm;
+  connection.query(queryString, vals, function(err, result) {
+    if (err) {
+      throw err;
+    }
+    console.log("am creating new user ===>", result)
+
+    cb(result);
+  });
+}
+
+module.exports.selectUserById =function(id, callback){
+  var queryString = "SELECT * FROM  users, WHERE id= ?";
+  connection.query(queryString, id, function(err, result){
+    callback(result);
+  })
+
+},
+
+// return count from user table
+module.exports.getUserCount = function(table, email, callback){
+  var queryString =  "Select COUNT(email) FROM " + table +  " WHERE email = ?";
+connection.query(queryString, email, function(err, result){
+  console.log("orm sql result ==>", result)
+  callback(result);
+})
+}
