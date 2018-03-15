@@ -1,3 +1,4 @@
+
 // =============================================================
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -28,3 +29,6 @@ app.use(ctrl);
 app.listen(PORT, function(){
   console.log("App is now listening.." + PORT);
 });
+
+
+//server > controllers > models > orm.js > connection.js

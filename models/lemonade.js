@@ -5,11 +5,22 @@ var lemonade = {
       cb(res);
     });
   },
-  insertOne: function(cb){
-    orm.insertOne("lemonades", lemonade, price, description, url, function(res){
+  insertOne: function(email, product_name, price, description, url, seller_id, cb){
+    orm.insertOne("lemonades", email, product_name, price, description, url, seller_id, function(res){
       cb(res);
     });
-  },
+  }
+  // insertUser: function(username, email, sell_items, buy_items, cb){
+  //   orm.insertUser("users", username, email, sell_items, buy_items, function(res){
+  //     cb(res);
+  //   });
+  // } 
+
+  // delete: function(cb){
+  //   orm.delete("lemonades", function(res){
+  //     cb(res);
+  //   });
+  // }
   // updateOne: function(cb){
   //   orm.updateOne("lemonades", idNum, function(res){
   //     cb(res);
