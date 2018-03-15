@@ -13,8 +13,6 @@ CREATE TABLE lemonades (
 	seller_id INT NOT NULL,
 	buyer_id INT,
 	PRIMARY KEY (id),
-	FOREIGN KEY (seller_id) REFERENCES users(id),
-	FOREIGN KEY (buyer_id) REFERENCES users(id)
 );
 
 -- CREATE TABLE users (
