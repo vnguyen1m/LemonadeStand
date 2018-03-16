@@ -46,3 +46,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+.back {
+	background: #e2e2e2;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+  }

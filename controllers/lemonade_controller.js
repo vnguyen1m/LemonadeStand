@@ -4,15 +4,21 @@ var router = express.Router();
 var lemonade = require("../models/lemonade.js");
 
 router.get("/", function (req, res){
+  res.render("layouts/login")
   lemonade.selectAll(function(data){
     var lemonadeObject = {
       lemonades:data
     };
     console.log(lemonadeObject);
     //res.json(lemonadeObject)
-    res.render("index", lemonadeObject);
+    
+    // res.render("index", lemonadeObject);
     
   });
+});
+
+router.get('/users/register', function (req, res){
+  res.render("layouts/register")
 });
 
 router.post("/order", function (req, res){

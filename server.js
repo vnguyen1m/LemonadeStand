@@ -10,7 +10,7 @@ var ctrl = require('./controllers/lemonade_controller.js');
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 4000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
