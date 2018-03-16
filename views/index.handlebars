@@ -35,14 +35,14 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 
-		<h1> Sell Your Lemonade</h1>
+		<h1> Got Lemonade? Sell here</h1>
 
 		<form class="create-lemonade-form" action="/order" method="POST">
 			<div class="form-group">
 				
 				<label for="newLemonade" id="email"> Email </label>
 				<input type="hidden" name="sold" value="false">
-				<input required type="text" id="newEmail" name="email" placeholder="Pink Lemonade"> <br>
+				<input required type="text" id="newEmail" name="email" placeholder="abc@aim.com"> <br>
 				<label for="newLemonade" id="lemonade-name"> Lemonade Name </label>
 				<input type="hidden" name="sold" value="false">
 				<input required type="text" id="newLemonade" name="product_name" placeholder="Pink Lemonade"> <br>
@@ -67,9 +67,9 @@
 	<div>
 	  
 	  	<ul class="sold">
+		  	<h2> Items Recently Sold </h2>
 	  		{{#each lemonades}}
 	  			{{#if this.sold}}
-		  			<h2> Items Recently Sold </h2>
 		  			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
 		  				<div class="text-center">
 			  				<br>

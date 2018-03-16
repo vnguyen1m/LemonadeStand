@@ -11,6 +11,7 @@ CREATE TABLE lemonades (
 	description VARCHAR(255) NOT NULL,
 	image VARCHAR(300),
 	seller_id INT NOT NULL,
+	sold BOOLEAN NOT NULL,
 	buyer_id INT,
 	PRIMARY KEY (id)
 );

@@ -1,4 +1,5 @@
 var orm = require ("../config/orm.js");
+
 var lemonade = {
   selectAll: function(cb){
     orm.selectAll("lemonades", function(res){
@@ -9,7 +10,12 @@ var lemonade = {
     orm.insertOne("lemonades", email, product_name, price, description, url, seller_id, function(res){
       cb(res);
     });
-  }
+  },
+  updateOne: function(sold, id, cb){
+    orm.updateOne("lemonades", sold, id, function(res){
+      cb(res);
+    });
+  },
   // insertUser: function(username, email, sell_items, buy_items, cb){
   //   orm.insertUser("users", username, email, sell_items, buy_items, function(res){
   //     cb(res);
@@ -21,11 +27,6 @@ var lemonade = {
   //     cb(res);
   //   });
   // }
-  // updateOne: function(cb){
-  //   orm.updateOne("lemonades", idNum, function(res){
-  //     cb(res);
-  //   });
-  // },
 };
 
 module.exports = lemonade;
