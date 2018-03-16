@@ -31,4 +31,3 @@ app.listen(PORT, function(){
 });
 
 
-//server > controllers > models > orm.js > connection.js

@@ -38,7 +38,7 @@ VALUES (
 	18.57,
 	'No artifical sweeteners or flavors',
 	'https://images-na.ssl-images-amazon.com/images/I/71zJYGkweiL._SX522_.jpg',
-	5);
+	4);
 
 
 INSERT INTO users (username, email, sell_items, buy_items)

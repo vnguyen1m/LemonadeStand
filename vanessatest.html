@@ -3,8 +3,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 <script type="text/javascript" src="./public/assets/js/lemonade.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <link rel="stylesheet" href="./public/assets/css/lemonade_style.css">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -96,17 +98,12 @@
   	<h1>Sell Your Lemonade</h1>
   	<form action="/action_page.php">
   Lemonade Name:<br>
-  <input id= "newLemonade" type="text" name="firstname" value="Pink Lemonade"><br><br>
-  Price:<br>
-  <input id= "lemonade-price" type="text" name="lastname" value="15.00"><br><br>
-  Seller Id:<br>
-  <input id= "lemonade-seller" type="text" name="lastname" value="12"><br><br>
-  Image:<br>
-  <input id= "lemonade-img" type="text" name="lastname" value="image url"><br><br>
-  Description:<br>
-  <input id= "lemonade-desc" type="text" name="lastname" value="description"><br><br>
 
-  <input class= "create-lemonade-form" type="submit" value="Submit">
+  <input type="text" name="firstname" value="Pink Lemonade"><br>
+  Quantity:<br>
+  <input type="text" name="lastname" value="100"><br><br>
+  <input type="submit" value="Submit">
+
 
 </form>
   </div>
@@ -157,6 +154,7 @@
 
 <script type="text/javascript">
 	var img = document.querySelector(".testimage");
+
 	console.log(img.naturalHeight);
 </script>
 
