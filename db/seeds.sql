@@ -41,11 +41,11 @@ VALUES (
 	4);
 
 
-INSERT INTO users (username, email, sell_items, buy_items)
-VALUES ('Pink', 'pink@', true, false);
-INSERT INTO users (username, email, sell_items, buy_items)
-VALUES ('lemonadelover', 'lemonadelover@', true, false);
-INSERT INTO users (username, email, sell_items, buy_items)
-VALUES ('special123', 'special123@', true, true);
-INSERT INTO users (username, email, sell_items, buy_items)
-VALUES ('Simply Lemonade', 'corporate@', true, false);
+-- INSERT INTO users (username, email, sell_items, buy_items)
+-- VALUES ('Pink', 'pink@', true, false);
+-- INSERT INTO users (username, email, sell_items, buy_items)
+-- VALUES ('lemonadelover', 'lemonadelover@', true, false);
+-- INSERT INTO users (username, email, sell_items, buy_items)
+-- VALUES ('special123', 'special123@', true, true);
+-- INSERT INTO users (username, email, sell_items, buy_items)
+-- VALUES ('Simply Lemonade', 'corporate@', true, false);
