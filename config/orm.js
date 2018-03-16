@@ -10,34 +10,18 @@ var orm = {
       cb(result);
     });
   },
-<<<<<<< HEAD
-  insertOne: function(table, lemonade, price, description, url, seller_id, cb){
-=======
   insertOne: function(table, email, lemonade, price, description, url, seller_id, cb){
->>>>>>> 6ae5643ec10021f6011ecb40476b72c0c323a983
     var queryString = "INSERT INTO " + table + " SET ?";
 
     console.log(queryString);
 
-<<<<<<< HEAD
-    connection.query(queryString, [{product_name: lemonade, price: price, description: description, image: url, seller_id: seller_id}],
-=======
     connection.query(queryString, [{email: email, product_name: lemonade, price: price, description: description, image: url, seller_id: seller_id}],
->>>>>>> 6ae5643ec10021f6011ecb40476b72c0c323a983
       function(err, result){
-      console.log("result ", result);
-      console.log("url ", url);     
-
         if (err){
           throw err;
         }
-        //connection.query()
         cb(result);
     });
-<<<<<<< HEAD
-
-  },
-=======
   }
   // insertUser: function(table, username, email, sell_items, buy_items, cb){
   //   var queryString = "INSERT INTO " + table + " SET ?";
@@ -67,7 +51,6 @@ var orm = {
   //       cb(result);
   //     })
   // }
->>>>>>> 6ae5643ec10021f6011ecb40476b72c0c323a983
   //   updateOne: function(table, idNum, cb){
   //   var queryString = "UPDATE " + table + " SET ? WHERE ?";
 

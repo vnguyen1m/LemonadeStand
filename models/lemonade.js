@@ -5,13 +5,8 @@ var lemonade = {
       cb(res);
     });
   },
-<<<<<<< HEAD
-  insertOne: function(product_name, price, description, url, seller_id, cb){
-    orm.insertOne("lemonades", product_name, price, description, url, seller_id, function(res){
-=======
   insertOne: function(email, product_name, price, description, url, seller_id, cb){
     orm.insertOne("lemonades", email, product_name, price, description, url, seller_id, function(res){
->>>>>>> 6ae5643ec10021f6011ecb40476b72c0c323a983
       cb(res);
     });
   }
