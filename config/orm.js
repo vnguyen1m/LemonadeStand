@@ -10,19 +10,47 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function(table, lemonade, price, description, url, cb){
+  insertOne: function(table, email, lemonade, price, description, url, seller_id, cb){
     var queryString = "INSERT INTO " + table + " SET ?";
 
     console.log(queryString);
 
-    connection.query(queryString, [{product_name: lemonade, price: price, description: description, image: url}],
+    connection.query(queryString, [{email: email, product_name: lemonade, price: price, description: description, image: url, seller_id: seller_id}],
       function(err, result){
         if (err){
           throw err;
         }
         cb(result);
     });
-  },
+  }
+  // insertUser: function(table, username, email, sell_items, buy_items, cb){
+  //   var queryString = "INSERT INTO " + table + " SET ?";
+
+  //   console.log(queryString);
+    
+    
+  //   connection.query(queryString, [{username: username, email: email, sell_items: sell_items, buy_items: buy_items}],
+  //     function(err, result){
+  //       if (err){
+  //         throw err;
+  //       }
+  //       cb(result);
+  //     });
+  // }
+
+  
+  // delete: function(table, lemonade, cb){
+  //   var queryString = "DELETE FROM " + table + " WHERE id = ?";
+
+  //   console.log('queryString ', queryString);
+  //   console.log("orm ", lemonade);
+
+  //   connection.query(queryString, [lemonade],
+  //     function(err, result){
+  //       if (err) throw err;
+  //       cb(result);
+  //     })
+  // }
   //   updateOne: function(table, idNum, cb){
   //   var queryString = "UPDATE " + table + " SET ? WHERE ?";
 

@@ -7,18 +7,19 @@
 	  	<ul class="not sold">
 	  		{{#each lemonades}}
 	  			{{#unless this.sold}}
-		  			<div class="col-xs-12 col-md-3">
+		  			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 		  				<div class="text-center">
 			  				<br>
 								<p> 
-									<img src="{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
+									<img src= "{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
 								</p>
+								<p> </p>
+								<p> User: {{this.seller_id}} </p>
+								<p> Email: {{this.email}} </p>
 								<p> {{this.product_name}} </p> <!-- product -->
-				  			<p> ${{this.price}} </p> <!-- price -->
-				  			<a href="#">
-				  				<button>Buy </button>
-				  				<button> View Details </button>
-				  			</a>
+				  			<p> ${{this.price}} </p>
+								<p> About: {{this.description}} </p> <!-- price -->
+				  				{{> lemonades/lemonade-bought sold=true}}
 				  			<br><br><br>
 				  		</div>
 		  			</div>
@@ -38,18 +39,53 @@
 
 		<form class="create-lemonade-form" action="/order" method="POST">
 			<div class="form-group">
+				
+				<label for="newLemonade" id="email"> Email </label>
+				<input type="hidden" name="sold" value="false">
+				<input required type="text" id="newEmail" name="email" placeholder="Pink Lemonade"> <br>
 				<label for="newLemonade" id="lemonade-name"> Lemonade Name </label>
 				<input type="hidden" name="sold" value="false">
 				<input required type="text" id="newLemonade" name="product_name" placeholder="Pink Lemonade"> <br>
 				<label for="newLemonade" id="lemonade-price"> Price </label>
-				<input required type="number" step="0.01" id="lemonade-price" name="price" placeholder="3.50"><br>
+				<input required type="text" id="lemonade-price" name="price" placeholder="3.50"><br>
 				<label for="newLemonade" id="lemonade-img"> Image URL </label>
 				<input required type="text" id="lemonade-img" name="image" placeholder="google.com"><br>
+				<label for="newLemonade" id="lemonade-seller"> Your Name </label>
+				<input required type="text" id="lemonade-seller" name="seller_id" placeholder="John Doe"><br>
 				<label for="newLemonade" id="lemonade-desc"> Description </label> <br>
 				<textarea required type="text" id="lemonade-desc" name="description" placeholder="Refreshingly sweet with natural honey" style="width:80%"></textarea>
 				<br><br>
-				<button type="submit" id="sell-btn">SELL </button>
+				<button type="submit" id="sell-btn">Upload Item </button>
 			</div>
 		</form>
 	</div>
 </div>
+
+
+<!-- RECENTLY SOLD -->
+	<br><br>
+	<div>
+	  
+	  	<ul class="sold">
+	  		{{#each lemonades}}
+	  			{{#if this.sold}}
+		  			<h2> Items Recently Sold </h2>
+		  			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+		  				<div class="text-center">
+			  				<br>
+								<p> 
+									<img src="{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
+								</p>
+								<p> User: {{this.seller_id}} </p>
+								<p> Email: {{this.email}} </p>
+								<p> {{this.product_name}} </p> <!-- product -->
+				  			<p> ${{this.price}} </p>
+								<p> About: {{this.description}} </p>  <!-- price -->
+				  			<br><br><br>
+				  		</div>
+		  			</div>
+	  			{{/if}}
+	  		{{/each}}
+	  	</ul>
+		  	
+	</div>
