@@ -11,10 +11,18 @@
 		  				<div class="text-center">
 			  				<br>
 								<p> 
-									<img src="{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
+									<img src= "{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
 								</p>
+								<p> </p>
+								<p> User: {{this.seller_id}} </p>
+								<p> Email: {{this.email}} </p>
 								<p> {{this.product_name}} </p> <!-- product -->
+<<<<<<< HEAD
 				  			<p> ${{this.price}} </p> <!-- price -->
+=======
+				  			<p> ${{this.price}} </p>
+								<p> About: {{this.description}} </p> <!-- price -->
+>>>>>>> 6ae5643ec10021f6011ecb40476b72c0c323a983
 				  				{{> lemonades/lemonade-bought sold=true}}
 				  			<br><br><br>
 				  		</div>
@@ -35,15 +43,23 @@
 
 		<form class="create-lemonade-form" action="/order" method="POST">
 			<div class="form-group">
+				
+				<label for="newLemonade" id="email"> Email </label>
+				<input type="hidden" name="sold" value="false">
+				<input required type="text" id="newEmail" name="email" placeholder="Pink Lemonade"> <br>
 				<label for="newLemonade" id="lemonade-name"> Lemonade Name </label>
 				<input type="hidden" name="sold" value="false">
 				<input required type="text" id="newLemonade" name="product_name" placeholder="Pink Lemonade"> <br>
 				<label for="newLemonade" id="lemonade-price"> Price </label>
-				<input required type="number" step="0.01" id="lemonade-price" name="price" placeholder="3.50"><br>
+				<input required type="text" id="lemonade-price" name="price" placeholder="3.50"><br>
 				<label for="newLemonade" id="lemonade-img"> Image URL </label>
 				<input required type="text" id="lemonade-img" name="image" placeholder="google.com"><br>
 				<label for="newLemonade" id="lemonade-seller"> Your Name </label>
+<<<<<<< HEAD
 				<input required type="number" id="lemonade-seller" name="seller_id" placeholder="John Doe"><br>
+=======
+				<input required type="text" id="lemonade-seller" name="seller_id" placeholder="John Doe"><br>
+>>>>>>> 6ae5643ec10021f6011ecb40476b72c0c323a983
 				<label for="newLemonade" id="lemonade-desc"> Description </label> <br>
 				<textarea required type="text" id="lemonade-desc" name="description" placeholder="Refreshingly sweet with natural honey" style="width:80%"></textarea>
 				<br><br>
@@ -68,8 +84,16 @@
 								<p> 
 									<img src="{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
 								</p>
+<<<<<<< HEAD
 								<p> {{this.product_name}} </p> <!-- product -->
 				  			<p> ${{this.price}} </p> <!-- price -->
+=======
+								<p> User: {{this.seller_id}} </p>
+								<p> Email: {{this.email}} </p>
+								<p> {{this.product_name}} </p> <!-- product -->
+				  			<p> ${{this.price}} </p>
+								<p> About: {{this.description}} </p>  <!-- price -->
+>>>>>>> 6ae5643ec10021f6011ecb40476b72c0c323a983
 				  			<br><br><br>
 				  		</div>
 		  			</div>
