@@ -16,6 +16,11 @@ var lemonade = {
       cb(res);
     });
   },
+  selectOne: function(id, cb) {
+    orm.selectOne("lemonades", id, function(res) {
+      cb(res);
+    });
+  }
   // insertUser: function(username, email, sell_items, buy_items, cb){
   //   orm.insertUser("users", username, email, sell_items, buy_items, function(res){
   //     cb(res);

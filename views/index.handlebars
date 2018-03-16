@@ -1,3 +1,7 @@
+
+
+
+
 <div class="container">
 	  		<!-- {{#each users}}
 	  			<p> this.username </p>
@@ -14,15 +18,48 @@
 									<img src= "{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
 								</p>
 								<p> </p>
-								<p> User: {{this.seller_id}} </p>
-								<p> Email: {{this.email}} </p>
+								<!-- <p> User: {{this.seller_id}} </p>
+								<p> Email: {{this.email}} </p> -->
 								<p> {{this.product_name}} </p> <!-- product -->
 				  			<p> ${{this.price}} </p>
-								<p> About: {{this.description}} </p> <!-- price -->
-				  				{{> lemonades/lemonade-bought sold=true}}
+								
+								<div class="text-center">
+								<!-- Big modal -->
+								<button class="btn btn-default view-details" data-toggle="modal" data-target=".bs-example-modal-sm2">View Details</button>
+
+								<div class="modal fade bs-example-modal-sm2">
+								  <div class="modal-dialog">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								        <h4 class="modal-title">{{this.product_name}}</h4>
+								      </div>
+								      <div class="modal-body">
+								        <p>
+								        	<img src= "{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
+								        </p>
+								        <p> Price: ${{this.price}} </p>
+								        <p> Description: {{this.description}} </p>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								      </div>
+								    </div><!-- /.modal-content -->
+								  </div><!-- /.modal-dialog -->
+								</div><!-- /.modal -->
+								
+								<br><br>
+
+				  			{{> lemonades/lemonade-bought sold=true}}
+								</div>
+
 				  			<br><br><br>
 				  		</div>
 		  			</div>
+
+
+
+
 	  			{{/unless}}
 	  		{{/each}}
 	  	</ul>
@@ -76,16 +113,40 @@
 								<p> 
 									<img src="{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
 								</p>
-								<p> User: {{this.seller_id}} </p>
-								<p> Email: {{this.email}} </p>
+							<!-- 	<p> User: {{this.seller_id}} </p>
+								<p> Email: {{this.email}} </p> -->
 								<p> {{this.product_name}} </p> <!-- product -->
 				  			<p> ${{this.price}} </p>
-								<p> About: {{this.description}} </p>  <!-- price -->
+								<!-- <p> {{this.description}} </p>  -->
 				  			<br><br><br>
 				  		</div>
 		  			</div>
 	  			{{/if}}
 	  		{{/each}}
 	  	</ul>
-		  	
 	</div>
+
+
+	<!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" id="closex">&times;</button>
+            <h3 class="modal-title text-center">Lemonade Details</h3>
+          </div>
+          <div class="modal-body">
+            <h4 class="text-center">Product: {{this.product}}</h4>
+            <p id="modalPhoto" class="text-center">{{this.image}}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="modalClose">Close</button>
+          </div>
+        </div> <!-- modal content -->
+      </div> <!-- modal-dialog -->
+    </div> <!--  myModal -->
+
+
+

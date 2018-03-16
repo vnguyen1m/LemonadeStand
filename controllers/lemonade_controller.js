@@ -31,6 +31,16 @@ router.put("/ordered/:id", function (req, res){
   });
 });
 
+router.get("/", function (req, res) {
+  lemonade.selectOne(function(data) {
+    var lemonadeObject = {
+      lemonades: data
+    };
+    console.log(lemonadeObject);
+    res.render('index', lemonadeObject);
+  });
+});
+
 // router.post("/adduser", function(req, res){
 //   lemonade.insertUser(req.body.username, req.body.email, req.body.sell_items, function(){
 //     res.redirect('/');

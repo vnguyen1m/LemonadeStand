@@ -35,7 +35,18 @@ var orm = {
         }
         cb(result);
     });
+  },
+  selectOne: function(table, id, cb) {
+    var queryString = "Select * FROM " + table + " WHERE ?";
+    connection.query(queryString, [{ id: id}], function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
   }
+
+
   // insertUser: function(table, username, email, sell_items, buy_items, cb){
   //   var queryString = "INSERT INTO " + table + " SET ?";
 
