@@ -22,7 +22,31 @@ var orm = {
         }
         cb(result);
     });
+  },
+  updateOne: function(table, sold, id, cb){
+    var queryString = "UPDATE " + table + " SET ? WHERE ?";
+
+    console.log(queryString);
+
+    connection.query(queryString, [{sold: true}, {id: id}],
+      function(err, result){
+        if (err){
+          throw err;
+        }
+        cb(result);
+    });
+  },
+  selectOne: function(table, id, cb) {
+    var queryString = "Select * FROM " + table + " WHERE ?";
+    connection.query(queryString, [{ id: id}], function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
   }
+
+
   // insertUser: function(table, username, email, sell_items, buy_items, cb){
   //   var queryString = "INSERT INTO " + table + " SET ?";
 
@@ -50,19 +74,6 @@ var orm = {
   //       if (err) throw err;
   //       cb(result);
   //     })
-  // }
-  //   updateOne: function(table, idNum, cb){
-  //   var queryString = "UPDATE " + table + " SET ? WHERE ?";
-
-  //   console.log(queryString);
-
-  //   connection.query(queryString, [{devoured: true}, {id: idNum}],
-  //     function(err, results){
-  //       if (err){
-  //         throw err;
-  //       }
-  //       cb(result);
-  //   });
   // }
 };
 

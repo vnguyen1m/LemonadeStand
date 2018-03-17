@@ -21,6 +21,26 @@ router.post("/order", function (req, res){
   });
 });
 
+router.put("/ordered/:id", function (req, res){
+  console.log(req.body);
+  console.log("sold", req.body.sold);
+  console.log("id", req.params.id);
+
+  lemonade.updateOne([req.body.sold], [req.params.id], function(){
+    res.redirect('/');
+  });
+});
+
+// router.get("/", function (req, res) {
+//   lemonade.selectOne(function(data) {
+//     var lemonadeObject = {
+//       lemonades: data
+//     };
+//     console.log(lemonadeObject);
+//     res.render('index', lemonadeObject);
+//   });
+// });
+
 // router.post("/adduser", function(req, res){
 //   lemonade.insertUser(req.body.username, req.body.email, req.body.sell_items, function(){
 //     res.redirect('/');
@@ -34,14 +54,5 @@ router.post("/order", function (req, res){
 //     res.redirect('/');
 //   })
 // })
-// router.put("/", function (req, res){
-//   console.log(req.body);
-//   // console.log("devoured", req.body.devoured);
-//   // console.log("id", req.params.id);
-
-//   // burger.updateOne([req.body.devoured], [req.params.id], function(){
-//   //   res.redirect('/');
-//   });
-// });
 
 module.exports = router;

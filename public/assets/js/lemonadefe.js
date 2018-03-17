@@ -1,3 +1,5 @@
+const router = require('./controllers/lemonade_controller.js');
+
 $(function() {
 	$('.change-sold').on('click', function(e) {
 		let id = $(this).data('id');
@@ -31,4 +33,32 @@ $(function() {
 			}
 		);
 	});
+
+	// $('.view-details').on('click', function() {
+	// 	event.preventDefault();
+
+	// 	const currentURL = window.location.origin;
+
+	// 	console.log("hi");
+
+	// 	$.ajax({
+ //        type: "POST",
+ //        url: "api/details",
+ //        contentType: "application/json",
+ //        // data: JSON.stringify(friendAdded),
+ //        // success: success,
+ //      }).done(function(data) {
+ //      	console.log(data);
+ //        // $('#modalName').html(data.matchName);
+ //        // let img = $('<img>').attr('src', data.matchImage);
+ //        // $('#modalPhoto').append(img);
+ //        $('#myModal').modal({
+ //          keyboard: false,
+ //          backdrop: 'static' 
+ //        });
+ //      });
+
+	// });
+
+
 });

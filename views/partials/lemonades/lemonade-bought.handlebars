@@ -1,7 +1,10 @@
-<form action="order/{{this.id}}?_method=PUT" method="POST">
+<form action="ordered/{{this.id}}?_method=PUT" method="POST">
 	<input type="hidden" name="sold" value="1">
 	<button type="submit" class="change-sold btn btn-primary" role="button" data-id="{{id}}" data-sold="{{sold}}">
 		{{#if sold}} Buy {{/if}}
 	</button>
-	<a href="#" class="btn btn-default" role="button" data-id="{{id}}">View Details</a></p>
+
+	<!-- <button type="button" class="btn btn-default view-details" role="button" data-id="{{id}}">
+		View Details 
+	</button> -->
 </form>
