@@ -5,7 +5,7 @@ VALUES (
 	14.69,
 	'Sweet lemonade drink',
 	'https://images-na.ssl-images-amazon.com/images/I/41dP1bmZAPL._SL160_.jpg',
-	1,
+	'Johnny',
 	false
 );
 INSERT INTO lemonades (email, product_name, price, description, image, seller_id, sold)
@@ -15,7 +15,7 @@ VALUES (
 	 4.85,
 	 'No artificial sweeteners',
 	 'https://images-na.ssl-images-amazon.com/images/I/71bF6N8xNrL._SY679SX449_SY679_CR,0,0,449,679_PIbundle-12,TopRight,0,0_SX449_SY679_CR,0,0,449,679_SH20_.jpg',
-	 2,
+	 'Sammy',
 	 false
 );
 INSERT INTO lemonades (email, product_name, price, description, image, seller_id, sold)
@@ -25,17 +25,17 @@ VALUES (
 	4.95,
 	'Mildly sweet lemonade',
 	'https://globalassets.starbucks.com/assets/a2b8437c14174fa38a45280d52e92b22.jpg',
-	3,
+	'Jimmy',
 	false
 );
 INSERT INTO lemonades (email, product_name, price, description, image, seller_id, sold)
 VALUES (
 	'blue@gmail.com',
 	'Lipton iced tea',
-	12.00,
+	12.01,
 	'Natural flavor',
 	'https://images-na.ssl-images-amazon.com/images/I/91sBXCUaibL._SX522_.jpg',
-	4
+	'Bobby',
 	false
 );
 INSERT INTO lemonades (email, product_name, price, description, image, seller_id, sold)
@@ -45,7 +45,7 @@ VALUES (
 	18.57,
 	'No artifical sweeteners or flavors',
 	'https://images-na.ssl-images-amazon.com/images/I/71zJYGkweiL._SX522_.jpg',
-	4,
+	'Sally',
 	false
 );
 

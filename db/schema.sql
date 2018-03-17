@@ -7,11 +7,11 @@ CREATE TABLE lemonades (
 	id INT NOT NULL AUTO_INCREMENT,
 	email VARCHAR(50) NOT NULL,
 	product_name VARCHAR(50) NOT NULL,
-	price INT NOT NULL,
+	price DECIMAL(5,2) NOT NULL,
 	description VARCHAR(255) NOT NULL,
-	image VARCHAR(300),
-	seller_id INT NOT NULL,
-	sold BOOLEAN NOT NULL,
+	image VARCHAR(900),
+	seller_id VARCHAR(50) NOT NULL,
+	sold BOOLEAN DEFAULT false,
 	buyer_id INT,
 	PRIMARY KEY (id)
 );
