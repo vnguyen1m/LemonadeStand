@@ -23,7 +23,7 @@ var orm = {
         cb(result);
     });
   },
-    updateOne: function(table, sold, id, cb){
+  updateOne: function(table, sold, id, cb){
     var queryString = "UPDATE " + table + " SET ? WHERE ?";
 
     console.log(queryString);

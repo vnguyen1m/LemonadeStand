@@ -32,14 +32,15 @@
 								    <div class="modal-content">
 								      <div class="modal-header">
 								        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-								        <h4 class="modal-title">{{this.product_name}}</h4>
+								        <h3 class="modal-title">{{this.product_name}}</h3>
 								      </div>
 								      <div class="modal-body">
 								        <p>
 								        	<img src= "{{this.image}}" alt="product" class="img-rounded product-thumbnail" style="width:250px;height:250px">
 								        </p>
-								        <p> Price: ${{this.price}} </p>
-								        <p> Description: {{this.description}} </p>
+								        <p> <b>Price</b>: ${{this.price}} </p>
+								        <p> <b>Description</b>: {{this.description}} </p>
+								        <p> <a href="mailto:{{this.email}}?subject=Interested in buying {{this.product_name}}&body=Hi, have a question on the product.">Contact Seller</a></p>
 								      </div>
 								      <div class="modal-footer">
 								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
